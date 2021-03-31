@@ -1,8 +1,8 @@
-package POJ;
+package POJ.Kwadrat;
 public class Kwadrat {
     public static void main(String[] args) {
         Square square = new Square(2);
-        System.out.printf("Area: %s, perimeter: %s%n", square.GetArea(), square.GetPerimeter());
+        System.out.printf("powierzchnia: %s, obwód: %s%n", square.GetArea(), square.GetPerimeter());
     }
     private static class Square {
         private final int width;
