@@ -6,7 +6,7 @@ public class Remote {
     }
     public void ChannelUP(){
         if(tv.On){
-            if(tv.channel < 37){
+            if(tv.channel < 20){
                 tv.channel = tv.channel + 1;
                 System.out.println("Channel up TV : " + tv.channel);
             }
@@ -18,10 +18,10 @@ public class Remote {
             System.out.println("zzzzz");
         }
     }
-    public void changeChannelDOWN(){
+    public void ChannelDOWN(){
         if(tv.On){
             if(tv.channel == 1){
-                tv.channel = 37;
+                tv.channel = 20;
                 System.out.println("Channel down TV : " + tv.channel);
             }
             else{
@@ -34,12 +34,12 @@ public class Remote {
     }
     public void changeVol(int ile){
         if(tv.On){
-            if(((tv.volume + ile) > 100) || ((tv.volume + ile) <= 0 )){
-              if((tv.volume + ile) > 100){
-                  tv.volume = 100;
+            if(((tv.volume + ile) > 10) || ((tv.volume + ile) <= 1 )){
+              if((tv.volume + ile) > 10){
+                  tv.volume = 10;
                   System.out.println("V_MAX");
               }else {
-                  tv.volume = 0;
+                  tv.volume = 1;
                   System.out.println("V_MIN");
               }
             } else {
@@ -47,7 +47,7 @@ public class Remote {
                 System.out.println("The volume is " + tv.volume);
             }
         }else {
-            System.out.println("zzzzz");
+            System.out.println("The volume is MIN");
         }
     }
     public void power(){
