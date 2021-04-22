@@ -1,4 +1,4 @@
-package poj.lab6;
+package poj.lab6.zad1;
 
 public enum Time {
     DAY(8),
