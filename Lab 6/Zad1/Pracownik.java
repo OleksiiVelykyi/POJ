@@ -1,4 +1,4 @@
-package poj.lab6
+package poj.lab6;
 public class Pracownik {
     private final String name;
     private final String surname;
@@ -8,7 +8,6 @@ public class Pracownik {
         this.surname = surname;
         this.salary = salary;
     }
-
     public double getSalary() {
         return salary;
     }
