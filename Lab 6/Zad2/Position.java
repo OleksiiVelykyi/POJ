@@ -7,6 +7,7 @@ public class Position {
         this.nazwaTowaru = nazwaTowaru;
         this.ilosc = ilosc;
         this.cena = cena;
+        
     }
     public double iloscWartosc() {
         return this.ilosc * this.cena;
