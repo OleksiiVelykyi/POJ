@@ -1,3 +1,4 @@
+package poj.lab6
 public class Firma {
     private final Worker[] workers;
 
