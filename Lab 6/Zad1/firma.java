@@ -1,40 +1,33 @@
-package poj.lab6
+package poj.lab6;
+
 public class Firma {
-    private final Worker[] workers;
-
-    public Firma(final Worker[] workers) {
-        this.workers = workers;
+    private final Pracownik[] pracowniki;
+    public Firma(final Pracownik[] pracowniki) {
+        this.pracowniki = pracowniki;
     }
-
-    public double MiesiecznyKosztFirmy() {
+    public double obliczMiesiecznyKosztFirmy() {
         int hoursInMonth = 30 * 8;
-        return this.calcCost(hoursInMonth);
+        return this.obliczKoszt(hoursInMonth);
     }
-
-    public double calcYearlyCost() {
+    public double obliczRocznyKosztFirmy() {
         int hoursInYear = 12 * 30 * 8;
-        return this.calcCost(hoursInYear);
+        return this.obliczKoszt(hoursInYear);
     }
-
-    public double calcCost(final Time period) {
-        return this.calcCost(period.getHours());
+    public double obliczKoszt(final Time period) {
+        return this.obliczKoszt(period.getHours());
     }
-
-    public double calcCost(final Time period, final int times) {
-        return this.calcCost(period.getHours() * times);
+    public double obliczKoszt(final Time period, final int times) {
+        return this.obliczKoszt(period.getHours() * times);
     }
-
-    private double calcWorkerCost(final Worker worker, final int hours) {
-        return worker.getSalary() * hours;
+    private double obliczPracownikKoszt(final Pracownik pracownik, final int hours) {
+        return pracownik.getSalary() * hours;
     }
-
-    private double calcCost(final int hours) {
-        double cost = 0;
-
-        for (Worker worker : this.workers) {
-            cost += this.calcWorkerCost(worker, hours);
+    private double obliczKosztFirmy(final int hours) {
+        double koszt = 0;
+        for (Pracownik pracownik : this.pracowniki) {
+            cost += this.obliczPracownikKoszt(pracownik, hours);
         }
 
-        return cost;
+        return koszt;
     }
 }
