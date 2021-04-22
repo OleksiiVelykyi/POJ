@@ -1,4 +1,4 @@
-package poj.lab6;
+package poj.lab6.zad1;
 public class Pracownik {
     private final String name;
     private final String surname;
