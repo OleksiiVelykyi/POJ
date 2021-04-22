@@ -5,6 +5,6 @@ public class Main {
         final Zamowienie zamowienie = new Zamowienie(new ArrayList<>());
         order.addPosition(new Position("sernik", 2, 2));
         order.addPosition(new Position("pierogi", 1, 6));
-        System.out.printf("Your order: %s", zamowienie);
+        System.out.printf("Zamowienie: %s", zamowienie);
     }
 }
