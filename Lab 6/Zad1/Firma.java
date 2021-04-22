@@ -1,4 +1,4 @@
-package poj.lab6;
+package poj.lab6.zad1;
 
 public class Firma {
     private final Pracownik[] pracowniki;
